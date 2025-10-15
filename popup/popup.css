@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 400px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+.header {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #00B14F;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    color: #00B14F;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+    color: #00B14F;
+    border-bottom-color: #00B14F;
+}
+
+.tab-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tool-section {
+    margin-bottom: 20px;
+}
+
+.tool-section h3 {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #00B14F, #00a145);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #00a145, #00913d);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #5a6268, #545b62);
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #20c997, #1e7e34);
+    transform: translateY(-2px);
+}
+
+.btn-contact {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.btn-website {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+    width: 48%;
+}
+
+.service-info {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid #00B14F;
+}
+
+.service-info h4 {
+    color: #00B14F;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.service-info ul {
+    list-style: none;
+    font-size: 12px;
+}
+
+.service-info li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.results {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #e9ecef;
+}
+
+.results h3 {
+    color: #00B14F;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#resultContent {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.contact-section {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-section h4 {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.contact-section p {
+    font-size: 12px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.success {
+    color: #28a745;
+    background: #d4edda;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.warning {
+    color: #ffc107;
+    background: #fff3cd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.error {
+    color: #dc3545;
+    background: #f8d7da;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #00B14F;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00B14F;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00a145;
+}

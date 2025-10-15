@@ -1,0 +1,23 @@
+# HapoDigital Chrome Extension Development
+
+node_modules/
+build/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.local
+.vscode/settings.json
+
+# Development files
+*.map
+*.tmp
+*.temp
+
+# OS generated files
+desktop.ini
+ehthumbs.db
+
+# Chrome Extension private keys
+*.pem

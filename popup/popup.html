@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HapoDigital SEO Tools</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <img src="../assets/logo.png" alt="HapoDigital" class="logo">
+        <h1>HapoDigital</h1>
+        <p class="tagline">Giải pháp SEO hiệu quả</p>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="seo">SEO Tools</button>
+            <button class="tab-btn" data-tab="backlink">Backlink</button>
+            <button class="tab-btn" data-tab="analysis">Phân tích</button>
+        </div>
+
+        <!-- SEO Tools Tab -->
+        <div class="tab-content active" id="seo">
+            <div class="tool-section">
+                <h3>Kiểm tra SEO cơ bản</h3>
+                <button id="checkTitle" class="btn btn-primary">Kiểm tra Title Tag</button>
+                <button id="checkMeta" class="btn btn-primary">Kiểm tra Meta Description</button>
+                <button id="checkHeadings" class="btn btn-primary">Kiểm tra Heading Structure</button>
+                <button id="checkImages" class="btn btn-primary">Kiểm tra Alt Text</button>
+            </div>
+        </div>
+
+        <!-- Backlink Tab -->
+        <div class="tab-content" id="backlink">
+            <div class="tool-section">
+                <h3>Công cụ Backlink</h3>
+                <button id="checkBacklinks" class="btn btn-secondary">Phân tích Backlink</button>
+                <button id="findOpportunities" class="btn btn-secondary">Tìm cơ hội Backlink</button>
+                <div class="service-info">
+                    <h4>Dịch vụ Backlink của HapoDigital:</h4>
+                    <ul>
+                        <li>✓ Backlink từ 40+ trang báo lớn</li>
+                        <li>✓ Guest Post chất lượng cao</li>
+                        <li>✓ Backlink Entity DA/PA cao</li>
+                        <li>✓ PR báo điện tử uy tín</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analysis Tab -->
+        <div class="tab-content" id="analysis">
+            <div class="tool-section">
+                <h3>Phân tích Website</h3>
+                <button id="pageSpeed" class="btn btn-success">Kiểm tra tốc độ trang</button>
+                <button id="mobileCheck" class="btn btn-success">Kiểm tra Mobile Friendly</button>
+                <button id="structuredData" class="btn btn-success">Kiểm tra Structured Data</button>
+            </div>
+        </div>
+
+        <!-- Results Area -->
+        <div class="results" id="results">
+            <h3>Kết quả kiểm tra:</h3>
+            <div id="resultContent">
+                Chọn công cụ để bắt đầu phân tích...
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h4>Cần hỗ trợ chuyên sâu?</h4>
+            <p>Liên hệ đội ngũ chuyên gia SEO</p>
+            <div class="contact-buttons">
+                <a href="tel:0965899745" class="btn btn-contact">📞 0965.899.745</a>
+                <a href="https://hapodigital.com" target="_blank" rel="noopener" class="btn btn-website">🌐 Website</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

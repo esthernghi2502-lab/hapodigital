@@ -1,0 +1,272 @@
+/* Content Script CSS for HapoDigital Chrome Extension */
+
+/* SEO Issue Highlights */
+.hapo-seo-highlight {
+    outline: 2px dashed #ff6b6b !important;
+    outline-offset: 2px !important;
+    background-color: rgba(255, 107, 107, 0.1) !important;
+}
+
+/* Floating SEO Widget */
+#hapo-seo-widget {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999999;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.hapo-widget-toggle {
+    background: linear-gradient(135deg, #00B14F, #00a145);
+    color: white;
+    padding: 12px;
+    border-radius: 50px 10px 10px 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0, 177, 79, 0.3);
+    transition: all 0.3s ease;
+    min-width: 80px;
+    justify-content: center;
+}
+
+.hapo-widget-toggle:hover {
+    background: linear-gradient(135deg, #00a145, #00913d);
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(0, 177, 79, 0.4);
+}
+
+.hapo-widget-toggle img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    padding: 2px;
+}
+
+.hapo-widget-toggle span {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.hapo-widget-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 280px;
+    border: 1px solid #e9ecef;
+}
+
+.hapo-widget-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 30px;
+    border: 10px solid transparent;
+    border-top-color: white;
+}
+
+.hapo-widget-content h4 {
+    margin: 0 0 15px 0;
+    color: #00B14F;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.hapo-widget-stats {
+    margin-bottom: 15px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 6px 0;
+}
+
+.stat .label {
+    font-weight: 500;
+    color: #333;
+}
+
+.stat .status {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status.good {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.hapo-widget-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hapo-widget-actions button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+#hapo-highlight-issues {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+}
+
+#hapo-highlight-issues:hover {
+    background: linear-gradient(135deg, #5a6268, #545b62);
+    transform: translateY(-1px);
+}
+
+#hapo-get-help {
+    background: linear-gradient(135deg, #00B14F, #00a145);
+    color: white;
+}
+
+#hapo-get-help:hover {
+    background: linear-gradient(135deg, #00a145, #00913d);
+    transform: translateY(-1px);
+}
+
+/* Tooltip Enhancements */
+.hapo-seo-highlight[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000000;
+    margin-bottom: 8px;
+}
+
+.hapo-seo-highlight[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #333;
+    z-index: 1000000;
+    margin-bottom: 2px;
+}
+
+/* Animation for highlighted elements */
+.hapo-seo-highlight {
+    animation: hapo-pulse 2s infinite;
+}
+
+@keyframes hapo-pulse {
+    0% {
+        outline-color: #ff6b6b;
+        background-color: rgba(255, 107, 107, 0.1);
+    }
+    50% {
+        outline-color: #ff5252;
+        background-color: rgba(255, 107, 107, 0.2);
+    }
+    100% {
+        outline-color: #ff6b6b;
+        background-color: rgba(255, 107, 107, 0.1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #hapo-seo-widget {
+        right: 10px;
+    }
+    
+    .hapo-widget-content {
+        width: 260px;
+        padding: 15px;
+    }
+    
+    .hapo-widget-toggle {
+        padding: 10px;
+        min-width: 70px;
+    }
+    
+    .hapo-widget-toggle span {
+        font-size: 11px;
+    }
+}
+
+/* Hide widget on very small screens */
+@media (max-width: 480px) {
+    .hapo-widget-content {
+        width: calc(100vw - 40px);
+        right: -10px;
+    }
+}
+
+/* Ensure widget doesn't interfere with page content */
+#hapo-seo-widget * {
+    box-sizing: border-box !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .hapo-widget-toggle {
+        background: #000 !important;
+        border: 2px solid #fff;
+    }
+    
+    .hapo-widget-content {
+        border: 2px solid #000;
+    }
+    
+    .hapo-seo-highlight {
+        outline-color: #000 !important;
+        background-color: #fff !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .hapo-widget-toggle,
+    .hapo-widget-actions button,
+    .hapo-seo-highlight {
+        animation: none !important;
+        transition: none !important;
+    }
+}

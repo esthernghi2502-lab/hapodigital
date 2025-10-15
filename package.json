@@ -1,0 +1,55 @@
+{
+  "name": "hapodigital-chrome-extension",
+  "version": "1.0.0",
+  "description": "Chrome Extension công cụ hỗ trợ SEO và Digital Marketing từ HapoDigital",
+  "author": "HapoDigital Team",
+  "license": "MIT",
+  "homepage": "https://hapodigital.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hapodigital/chrome-extension"
+  },
+  "keywords": [
+    "chrome-extension",
+    "seo",
+    "backlink",
+    "digital-marketing",
+    "hapodigital",
+    "vietnam-seo"
+  ],
+  "scripts": {
+    "build": "echo 'Building extension...' && npm run validate",
+    "validate": "echo 'Validating manifest...' && node scripts/validate-manifest.js",
+    "test": "echo 'Running tests...' && npm run validate",
+    "package": "echo 'Creating package...' && npm run build && node scripts/create-package.js",
+    "dev": "echo 'Development mode - watching files...'",
+    "lint": "echo 'Linting JavaScript files...'",
+    "format": "echo 'Formatting code...'",
+    "clean": "echo 'Cleaning build artifacts...'"
+  },
+  "devDependencies": {
+    "archiver": "^5.3.1",
+    "fs-extra": "^11.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "manifest": {
+    "version": 3,
+    "chrome_version": ">=88.0.0"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "contextMenus",
+    "notifications"
+  ],
+  "contact": {
+    "email": "support@hapodigital.com",
+    "phone": "0965899745",
+    "website": "https://hapodigital.com"
+  }
+}
